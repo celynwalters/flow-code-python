@@ -18,8 +18,6 @@ import cv2
 import sys
 import numpy as np
 
-import readFlowFile
-
 # ==================================================================================================
 def makeColorwheel() -> np.array:
 	"""
@@ -173,6 +171,8 @@ def computeImg(flow) -> np.array:
 
 # ==================================================================================================
 if (__name__ == "__main__"):
+	import readFlowFile
+
 	parser = argparse.ArgumentParser()
 	parser.add_argument("flow_file", type=str, default="colorTest.flo", help="Flow file")
 	parser.add_argument("--write", action="store_true", help="Write flow as PNG")
